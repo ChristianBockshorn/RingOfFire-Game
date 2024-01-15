@@ -1,5 +1,5 @@
 export class Game {
-    public players: string[] = [];
+    public players: string[] = ['Christian'];
     public stack: string[] = [];
     public playerdCard: string[] = [];
     public currentPlayer: number = 0;
@@ -11,12 +11,8 @@ export class Game {
             this.stack.push('clubs_' + i);
             this.stack.push('hearts_' + i);
         }
-
         shuffle(this.stack);
-
     }
-
-    
 }
 
 function shuffle(array:string[]) {
