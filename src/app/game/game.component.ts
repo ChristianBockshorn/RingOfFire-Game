@@ -4,11 +4,13 @@ import { PlayerComponent } from './player/player.component';
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { DialogAddPlayerComponent } from './dialog-add-player/dialog-add-player.component';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatIconModule, MatButtonModule],
+  imports: [CommonModule, PlayerComponent, MatIconModule, MatButtonModule,FormsModule,DialogAddPlayerComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -40,6 +42,8 @@ export class GameComponent {
       }
     }
   }
+
+  openDialog(){}
 
 
 }
